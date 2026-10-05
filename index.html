@@ -166,6 +166,23 @@ footer .row a{color:var(--ink-2)}
     </div>
     <p class="figcap">三张图是<b>同一个 AI 虚构人物</b>跨三个年代与场景，面部特征保持一致——由真实链路跑出来，不是拼图。<b>全仓不含任何真实人物照片。</b></p>
 
+    <h3>产品界面（本地跑通链路后实截）</h3>
+    <div class="gallery">
+      <figure style="margin:0">
+        <img class="shot" src="assets/day3-ui-1-anchor.jpg" width="1200" height="833" alt="身份确认页：上传的旧照片与系统读取用的照片并列，下方是从照片中提取的外貌特征" loading="lazy">
+        <figcaption class="figcap"><b>先确认「这就是他」</b>——左边是上传的旧照片，右边是系统读取用的那张；下面是从照片里读出的 12 项外貌特征。确认之后才能往下走。</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img class="shot" src="assets/day3-ui-2-result.jpg" width="1200" height="833" alt="生成结果页：同一人物在 80-90 年代城市公园的新照片" loading="lazy">
+        <figcaption class="figcap"><b>生成结果</b>——同一人物出现在「80–90 年代 · 城市公园」。共请求 2 张，界面如实显示只有 1 张成功交付，并给出「再试一次」——<b>不藏失败</b>。</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img class="shot" src="assets/day3-ui-3-history.jpg" width="1200" height="833" alt="历史页：原照片、人物特征与历次生成记录" loading="lazy">
+        <figcaption class="figcap"><b>历史留痕</b>——每张原照片、从它读出的人物特征、以及基于它生成过的每一张，都能追溯与单独删除。</figcaption>
+      </figure>
+    </div>
+    <p class="figcap">三张界面截图取自本地跑通的完整链路：上传 → 提取特征 → 确认 → 选年代与场景 → 生成 → 结果与留痕。演示用的旧照片是 AI 虚构人物，<b>全程没有出现任何真实人物照片</b>。</p>
+
     <h3>可验证的数字</h3>
     <div class="stats">
       <div class="stat"><div class="v">84</div><div class="k">Git 提交</div></div>
