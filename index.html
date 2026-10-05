@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>李嘉妮 · AI 应用与解决方案（储能 · 新能源方向）</title>
+<meta name="description" content="车辆工程本科，用 AI Agent 工作流独立交付过完整全栈项目。作品集：回家照相馆（626 个测试用例全部通过的全栈应用）、户用储能管家 PRD 与 12 页可交互原型、储能制造 AI 视觉质检 Agent Skill。">
+<meta property="og:title" content="李嘉妮 · AI 应用与解决方案">
+<meta property="og:description" content="把需求拆成能验收的东西，再用 AI Agent 把它们做出来。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23A63229'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='%23FAFAF7' font-family='serif'>%E6%9D%8E</text></svg>">
+<style>
+:root{
+  --ink:#1a1a1a; --ink-2:#4a4a46; --ink-3:#8a8781;
+  --paper:#fafaf7; --line:#e4e1da; --line-2:#cfcbc2;
+  --accent:#a63229;
+  --serif:"Source Han Serif SC","Noto Serif SC","Songti SC","SimSun",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --w:1080px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.75;
+  font-feature-settings:"kern" 1;
+}
+img{max-width:100%; display:block; height:auto}
+a{color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(166,50,41,.28)}
+a:hover{border-bottom-color:var(--accent)}
+.wrap{max-width:var(--w); margin:0 auto; padding:0 28px}
+.mono{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace; font-size:.9em}
+
+/* ---------- 顶部 ---------- */
+.hero{padding:76px 0 56px; border-bottom:1px solid var(--line)}
+.hero-grid{display:grid; grid-template-columns:1fr 216px; gap:52px; align-items:start}
+h1{font-family:var(--serif); font-size:44px; line-height:1.2; margin:0 0 4px; letter-spacing:.02em}
+.hero-en{font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-3); margin:0 0 26px}
+.role{font-size:17px; font-weight:600; margin:0 0 18px}
+.role span{color:var(--ink-3); font-weight:400}
+.lede{font-family:var(--serif); font-size:21px; line-height:1.7; margin:0 0 22px; padding-left:16px; border-left:2px solid var(--accent)}
+.hero p.body{color:var(--ink-2); margin:0 0 22px}
+.hero p.body strong{color:var(--ink)}
+.contact{display:flex; flex-wrap:wrap; gap:8px 22px; font-size:14px; color:var(--ink-2); padding-top:20px; border-top:1px solid var(--line)}
+.contact .k{color:var(--ink-3); margin-right:5px}
+.portrait{border:1px solid var(--line-2)}
+.portrait-cap{font-size:12px; color:var(--ink-3); margin-top:9px; text-align:center}
+
+/* ---------- 区块 ---------- */
+section{padding:64px 0; border-bottom:1px solid var(--line)}
+.sec-head{display:flex; align-items:baseline; gap:14px; margin:0 0 8px}
+.sec-no{font-family:var(--serif); font-size:13px; color:var(--accent); letter-spacing:.1em}
+h2{font-family:var(--serif); font-size:29px; margin:0; line-height:1.3}
+.sec-sub{color:var(--ink-3); font-size:14px; margin:0 0 32px}
+.tags{display:flex; flex-wrap:wrap; gap:7px; margin:0 0 20px}
+.tag{font-size:12px; color:var(--ink-2); border:1px solid var(--line-2); padding:2px 10px}
+h3{font-family:var(--serif); font-size:19px; margin:34px 0 12px}
+p{margin:0 0 16px}
+.body{color:var(--ink-2)}
+.body strong{color:var(--ink)}
+.quote{font-family:var(--serif); font-size:19px; line-height:1.7; margin:0 0 26px; padding:18px 22px; background:#f4f2ec; border-left:2px solid var(--accent)}
+ul.ev{margin:0 0 16px; padding-left:0; list-style:none}
+ul.ev li{padding-left:18px; position:relative; margin-bottom:9px; color:var(--ink-2)}
+ul.ev li::before{content:"—"; position:absolute; left:0; color:var(--accent)}
+ul.ev li strong{color:var(--ink)}
+
+/* ---------- 图表区 ---------- */
+.gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:0 0 12px}
+.gallery.two{grid-template-columns:repeat(2,1fr)}
+.shot{border:1px solid var(--line); background:#fff}
+.figcap{font-size:13px; color:var(--ink-3); line-height:1.6}
+.figcap b{color:var(--ink-2); font-weight:600}
+.full{border:1px solid var(--line); background:#fff; margin:0 0 14px}
+
+/* ---------- 数字表 ---------- */
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(148px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin:0 0 22px}
+.stat{background:var(--paper); padding:14px 16px}
+.stat .v{font-family:var(--serif); font-size:25px; line-height:1.2; color:var(--ink)}
+.stat .v small{font-size:14px; color:var(--ink-2); font-family:var(--sans)}
+.stat .k{font-size:12px; color:var(--ink-3); margin-top:3px}
+
+/* ---------- 链接行 ---------- */
+.links{display:flex; flex-wrap:wrap; gap:10px; margin-top:20px}
+.btn{display:inline-block; font-size:14px; padding:9px 18px; border:1px solid var(--ink); color:var(--ink); border-bottom-width:1px}
+.btn:hover{background:var(--ink); color:var(--paper)}
+.btn.primary{border-color:var(--accent); color:var(--accent)}
+.btn.primary:hover{background:var(--accent); color:var(--paper)}
+
+.notice{font-size:13.5px; line-height:1.7; color:var(--ink-2); background:#f4f2ec; border:1px solid var(--line); padding:14px 18px; margin:0 0 22px}
+.notice b{color:var(--accent)}
+
+/* ---------- 关于我 ---------- */
+.about-cols{display:grid; grid-template-columns:1fr 1fr; gap:44px}
+.about-cols h3{margin-top:0}
+
+footer{padding:44px 0 64px; color:var(--ink-3); font-size:13.5px}
+footer .row{display:flex; flex-wrap:wrap; gap:8px 24px; margin-bottom:14px}
+footer .row a{color:var(--ink-2)}
+
+@media (max-width:860px){
+  .hero{padding:52px 0 40px}
+  .hero-grid{grid-template-columns:1fr; gap:30px}
+  .portrait{max-width:190px}
+  h1{font-size:34px}
+  .lede{font-size:19px}
+  section{padding:46px 0}
+  h2{font-size:25px}
+  .gallery,.gallery.two{grid-template-columns:1fr}
+  .about-cols{grid-template-columns:1fr; gap:0}
+  .wrap{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>李嘉妮</h1>
+      <p class="hero-en">Jiani Li</p>
+      <p class="role">求职意向：AI 应用 / 解决方案 <span>（储能 · 新能源方向）</span></p>
+      <p class="lede">把需求拆成能验收的东西，再用 AI Agent 把它们做出来。</p>
+      <p class="body">车辆工程本科。在<b>沃太能源「AI 黑客松」集训营</b>（六天四夜 · 结业证书）里，我用 AI Agent 工作流独立交付了三个储能方向的课题——其中一个已开源的全栈应用，有 <strong>84 次提交</strong>、<strong>626 个测试用例全部通过</strong>。</p>
+      <p class="body">我住在江苏南通，期望工作地：南通 / 苏州 / 上海。</p>
+      <div class="contact">
+        <span><span class="k">邮箱</span><a href="mailto:2071882241@qq.com">2071882241@qq.com</a></span>
+        <span><span class="k">GitHub</span><a href="https://github.com/jjiani-li">github.com/jjiani-li</a></span>
+        <span><span class="k">所在地</span>江苏南通</span>
+      </div>
+    </div>
+    <figure style="margin:0">
+      <img class="portrait" src="assets/photo.jpg" width="900" height="1200" alt="李嘉妮的证件照">
+    </figure>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 项目一 ============ -->
+<section id="p1">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">项目一</span><h2>回家照相馆 · 旧照片身份锚点重建</h2></div>
+    <p class="sec-sub">个人项目 · 已开源 · 全栈 · 篇幅最大</p>
+    <div class="tags">
+      <span class="tag">Next.js 15</span><span class="tag">React 19</span><span class="tag">TypeScript</span>
+      <span class="tag">SQLite</span><span class="tag">Vitest</span><span class="tag">火山引擎方舟</span>
+    </div>
+
+    <p class="quote">上传旧照片 → 提取面部特征作为「身份锚点」→ 按【年代 × 场景】生成同一人物的写实照。</p>
+
+    <p class="body">定位取舍：这是<b>照片重建</b>，不是老照片修复——不做划痕与褪色修补，而是让同一个人出现在他从未拍过的年代场景里。这条取舍有 ADR 决策记录背书。</p>
+
+    <div class="gallery">
+      <figure style="margin:0">
+        <img class="shot" src="assets/day3-scene-1.jpg" width="1000" height="1000" alt="同一人物在 80-90 年代老式照相馆的生成照片">
+        <figcaption class="figcap"><b>80–90 年代 · 老式照相馆</b></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img class="shot" src="assets/day3-scene-2.jpg" width="1000" height="1000" alt="同一人物在 50-70 年代家庭客厅的生成照片" loading="lazy">
+        <figcaption class="figcap"><b>50–70 年代 · 家庭客厅</b></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img class="shot" src="assets/day3-scene-3.jpg" width="1000" height="1000" alt="同一人物在 2010-2020 年代城市公园的生成照片" loading="lazy">
+        <figcaption class="figcap"><b>2010–2020 年代 · 城市公园</b></figcaption>
+      </figure>
+    </div>
+    <p class="figcap">三张图是<b>同一个 AI 虚构人物</b>跨三个年代与场景，面部特征保持一致——由真实链路跑出来，不是拼图。<b>全仓不含任何真实人物照片。</b></p>
+
+    <h3>可验证的数字</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">84</div><div class="k">Git 提交</div></div>
+      <div class="stat"><div class="v">25</div><div class="k">HTTP 端点</div></div>
+      <div class="stat"><div class="v">7</div><div class="k">功能页面</div></div>
+      <div class="stat"><div class="v">626</div><div class="k">测试用例全通过<br>（70 个测试文件）</div></div>
+      <div class="stat"><div class="v">89</div><div class="k">验收检查项<br>（单测 22 + 自动 67）</div></div>
+      <div class="stat"><div class="v">1.43<small> 万行</small></div><div class="k">非测试源码 TS / TSX</div></div>
+    </div>
+
+    <h3>值得说的工程细节</h3>
+    <ul class="ev">
+      <li><strong>文档门禁</strong>：PRD 与代码不同步就构建失败，17 条断言全绿才放行——文档不是交完就烂的。</li>
+      <li><strong>三层验收</strong>：A 层单元测试 22 项 / B 层自动化验收 67 项 / C 层盲测，把「我觉得没问题」换成可复现的判定。</li>
+      <li><strong>身份锚点一致性</strong>：跨年代、跨场景生成时锁住面部特征，避免"换了个年代也换了个人"。</li>
+      <li><strong>合规设计</strong>：照片授权声明永久留痕、生成图写入 AIGC 隐式标识、16 项审计动作全程记录。</li>
+      <li><strong>真 / mock 双实现</strong>：上游接火山引擎方舟（Doubao 视觉理解做特征提取、Doubao-Seedream 做图像生成），但离线也能跑通全链路。</li>
+    </ul>
+
+    <div class="links">
+      <a class="btn primary" href="https://github.com/jjiani-li/huijia-photostudio">查看开源仓库 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 项目二 ============ -->
+<section id="p2">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">项目二</span><h2>沃太家庭能源管家 Butler · 产品设计</h2></div>
+    <p class="sec-sub">集训营课题 · 产品设计 ＋ 可交互原型</p>
+    <div class="tags">
+      <span class="tag">PRD 10 篇</span><span class="tag">交互原型</span><span class="tag">Angular</span><span class="tag">信息架构</span>
+    </div>
+
+    <p class="quote">一套户用储能 App 的产品设计交付物：10 篇 PRD，加一个 12 页可交互原型。</p>
+
+    <p class="body">从「今天该什么时候充电」到「停电时够不够用」，产品要回答的问题都在用户家里，而回答它们需要解释、需要边界、还需要用户随时能推翻它。整套 PRD 围绕这一点展开，并用一个零依赖的单文件原型把 12 个页面全部跑通。</p>
+
+    <h3>可验证的数字</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">10<small> 篇</small></div><div class="k">PRD，8,773 行</div></div>
+      <div class="stat"><div class="v">12</div><div class="k">页面信息架构<br>（＋4 个一级导航分区）</div></div>
+      <div class="stat"><div class="v">33</div><div class="k">领域实体<br>（拆解补充至 50）</div></div>
+      <div class="stat"><div class="v">6</div><div class="k">运行模式状态机</div></div>
+      <div class="stat"><div class="v">14</div><div class="k">条 MVP 验收标准</div></div>
+      <div class="stat"><div class="v">2,874<small> 行</small></div><div class="k">单文件原型<br>（59 个交互动作）</div></div>
+    </div>
+
+    <h3>原型界面</h3>
+    <div class="gallery two">
+      <figure style="margin:0">
+        <img class="shot" src="assets/butler-1-today.jpg" width="1100" height="764" alt="管家原型「今日」页面：预计收益、备用电量、能量流曲线与待决策事项" loading="lazy">
+        <figcaption class="figcap"><b>今日</b>——今天预计省多少、明早备电够用几小时、现在在做什么</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img class="shot" src="assets/butler-3-incidents.jpg" width="1100" height="764" alt="管家原型「异常」页面：按 L0–L3 分级的异常清单与闭环状态" loading="lazy">
+        <figcaption class="figcap"><b>异常</b>——L0–L3 分级、逐条说明「我已经做了什么、等你决定什么」</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img class="shot" src="assets/butler-2-plan.jpg" width="1100" height="764" alt="管家原型「计划」页面：全天充放电安排与调整入口" loading="lazy">
+        <figcaption class="figcap"><b>计划</b>——全天的充放电安排，以及「我要调整」的四项人话选项</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img class="shot" src="assets/butler-4-installer.jpg" width="1100" height="764" alt="管家原型「安装商视图」：面向安装商的工单与接管入口" loading="lazy">
+        <figcaption class="figcap"><b>安装商视图</b>——同一个产品，三类角色的信息边界不同</figcaption>
+      </figure>
+    </div>
+    <p class="figcap" style="margin-bottom:22px">截图取自原型真实界面；原型可在本页直接打开体验（零依赖、单文件）。</p>
+
+    <h3>三条设计约束</h3>
+    <ul class="ev">
+      <li><strong>护栏引擎是运行模式的唯一写入方</strong>：系统的运行模式只允许一个模块写，避免多入口写状态导致页面之间口径撕裂。</li>
+      <li><strong>护栏之外还有一条硬边界</strong>：电压、保护阈值、并网参数这类安全参数，管家永不可触碰。</li>
+      <li><strong>弃权也要解释</strong>：「今天放弃了一次套利」不是沉默，而是必须说明为什么放弃，并给出影响。</li>
+      <li><strong>主动收敛口径</strong>：对照数据模型排查出总 PRD 中 <b>3 处数据口径偏差</b>（算例两数互相矛盾、收益恒等式不闭合），重新标定门槛值。</li>
+    </ul>
+
+    <div class="notice">
+      <b>如实说明</b>：本项目的交付重点是产品设计与交互验证——10 篇 PRD 与 12 页可交互原型。Angular 工程侧只完成到「今日管家」一页（另附完整数据层：50 个接口、Signal 状态中枢、3 份模拟数据、13 个 UI 组件），其余 14 条路由为占位。<br>
+      本项目出自沃太能源「AI 黑客松」集训营课题，是<b>个人练习作品，非公司正式产品</b>；文中金额、收益、比例为说明业务逻辑的示例假设，运行数据为模拟数据。
+    </div>
+
+    <div class="links">
+      <a class="btn primary" href="demo/butler-prototype.html">在线体验原型 →</a>
+      <a class="btn" href="https://github.com/jjiani-li/home-energy-butler-prd">PRD 与源码仓库</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 项目三 ============ -->
+<section id="p3">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">项目三</span><h2>AI 视觉质检 · 两个自研 Agent Skill</h2></div>
+    <p class="sec-sub">集训营课题 · Agent Skill 设计 · 篇幅最小</p>
+    <div class="tags"><span class="tag">Agent Skill</span><span class="tag">缺陷分级</span><span class="tag">跨工序溯源</span><span class="tag">数据说话</span></div>
+
+    <p class="quote">在储能制造「AI 视觉质检（全工序）」的给定场景下、基于模拟数据，独立完成缺陷分级分析与跨工序溯源。</p>
+
+    <p class="body">两个 Skill 分工：<span class="mono">vision-qc-auditor</span> 定「这套质检系统按什么原则取舍」，<span class="mono">trace-diagram</span> 把缺陷明细变成跨工序溯源图。</p>
+
+    <img class="full" src="assets/qc-trace-diagram.png" width="2048" height="1320" alt="跨工序缺陷追踪溯源流程图" loading="lazy">
+    <p class="figcap" style="margin-bottom:26px">跨工序缺陷追踪溯源图（成品截图）。</p>
+
+    <h3>可验证的数字</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">2</div><div class="k">个自研 Agent Skill</div></div>
+      <div class="stat"><div class="v">10<small> 道</small></div><div class="k">覆盖工序（链路基线 14 道）</div></div>
+      <div class="stat"><div class="v">3<small> 个月</small></div><div class="k">34 条记录 · 14 种缺陷类型</div></div>
+      <div class="stat"><div class="v">3</div><div class="k">个连月复现的上游批次根因</div></div>
+    </div>
+    <ul class="ev">
+      <li>自写严重度加权分析脚本（<strong>致命 5 / 严重 2 / 一般 1</strong>），按月份窗口做集中度比对，输出 86 行定期排查报告。</li>
+      <li>质检报告 116 行：15 条缺陷样例、缺陷集中在 4 道工序（占 60%），识别出 3 个系统性问题。</li>
+      <li>能力边界写清楚：本数据集序列号唯一、无法串联同一物料的多工序路径，因此只做工序分布与周期性比对，<strong>不推断跨工序传递边</strong>。</li>
+    </ul>
+
+    <div class="notice">
+      <b>如实说明</b>：本项目出自沃太能源「AI 黑客松」集训营的<b>给定案例</b>（案例 15：AI 视觉质检·全工序），全部数据为<b>AI 生成的模拟样本</b>，工艺窗口数值为分析用假设值。溯源图的渲染调用了第三方技能 archify（MIT）——<b>图的数据与结论是本人产出，绘图工具是第三方的</b>。
+    </div>
+
+    <div class="links">
+      <a class="btn primary" href="https://github.com/jjiani-li/vision-qc-agent-skills">查看开源仓库 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 关于我 ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">关于我</span><h2>制造业的底子，客户侧的手感</h2></div>
+    <p class="sec-sub">以及我为什么在做 AI 应用</p>
+
+    <div class="about-cols">
+      <div>
+        <h3>先认识的是设备和人</h3>
+        <p class="body">本科读车辆工程，学的是机械设计、汽车理论、汽车电器与电控——所以储能柜里的液冷管路、BMS、气密性测试这些词，对我不是黑话。</p>
+        <p class="body">但真正让我改主意的是站在客户面前的那段时间：在蔚来乐道做 Fellow 实习生，接待进店客户、讲产品、跑门店直播与账号运维，累计产出有效线索 100 余条；也在樊星装饰画做过带货主播，全身出镜、无稿件讲解，能独立撑完最长 4 小时不间断直播。更早还在中国移动做过客服助理，海外新媒体做过线上运营。</p>
+        <p class="body">这些经历教我的是一件事：<strong>客户说不清自己要什么，但一定说得出什么让他不安</strong>。</p>
+      </div>
+      <div>
+        <h3>再做 AI 应用</h3>
+        <p class="body">工科 + 客户侧的组合，落到储能行业正好卡在一个位置上：既要能把客户的顾虑翻译成需求与验收标准，也要能判断技术边界在哪、哪些话不能承诺。</p>
+        <p class="body">所以在沃太能源的 AI 黑客松集训营里，我没有停在「学会用 AI 工具」，而是按完整链路走了一遍：写 PRD → 定验收标准 → 用 AI Agent 工作流实现 → 自建门禁跑测试 → 复盘取舍。上面三个项目就是这条链路的产物，每一个都开源、都能点开核对。</p>
+        <p class="body">我想做的是<strong>能落地、能被验收的 AI 应用</strong>——不是概念演示。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <a href="mailto:2071882241@qq.com">2071882241@qq.com</a>
+      <a href="https://github.com/jjiani-li">github.com/jjiani-li</a>
+      <span>江苏南通</span>
+      <span>期望工作地：南通 / 苏州 / 上海</span>
+    </div>
+    <p style="margin:0">标注为「集训营课题」的项目均出自沃太能源「AI 黑客松」集训营（2026 年 9 月 · 六天四夜 · 结业证书），为个人练习作品，不代表任何公司的立场或正式产品。</p>
+  </div>
+</footer>
+
+</body>
+</html>
